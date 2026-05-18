@@ -121,8 +121,6 @@ backgroundColor: 'rgba(255, 255, 255, 0.1)'
 {/* Menu de perfil */}
 <IconButton color="inherit" onClick={handleProfileMenuOpen}>
 <Avatar
-src="/src/assets/minha-foto.jpg"
-alt="Iago"
 sx={{ width: 32, height: 32 }}
 >
 {user?.nome ? user.nome.charAt(0).toUpperCase() : <AccountCircle />}
@@ -149,8 +147,6 @@ backgroundColor: 'rgba(239, 68, 68, 0.1)'
 
 <IconButton color="inherit" onClick={handleProfileMenuOpen}>
 <Avatar
-src="/src/assets/minha-foto.jpg"
-alt="Iago"
 sx={{ width: 32, height: 32 }}
 >
 {user?.nome ? user.nome.charAt(0).toUpperCase() : <AccountCircle />}

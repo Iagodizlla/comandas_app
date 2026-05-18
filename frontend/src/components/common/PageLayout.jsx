@@ -1,4 +1,4 @@
-import { Box, Typography, Paper } from '@mui/material';
+import { Box, Typography, Paper, Avatar } from '@mui/material';
 const PageLayout = ({ children, title, actions, maxWidth = 'lg' }) => (
 <Box sx={{
 width: '100%', maxWidth: maxWidth === 'lg' ? 1200 : maxWidth === 'md' ? 900 : 600, mx: 'auto',
@@ -12,14 +12,34 @@ background: 'linear-gradient(135deg, #1e293b 0%, #334155 100%)',
 color: 'white', borderRadius: 3, display: 'flex',
 alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2
 }}>
-<Typography
-variant="h4" component="h1"
-sx={{
-fontWeight: 600, color: 'white', display: 'flex', alignItems: 'center', gap: 1, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }
-}}
->
-{title}
-</Typography>
+<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+    
+    <Typography
+        variant="h4"
+        component="h1"
+        sx={{
+            fontWeight: 600,
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1,
+            fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }
+        }}
+    >
+        {title}
+    </Typography>
+
+    <Avatar
+        src="/src/assets/iago.jpg"
+        alt="Iago"
+        sx={{
+            width: 48,
+            height: 48,
+            border: '2px solid white'
+        }}
+    />
+
+</Box>
 {actions && (
 <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
 {actions}
